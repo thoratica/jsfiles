@@ -1,4 +1,4 @@
-Entry.backup = async (type = 'text') => {
+window.tica.backup = async (type = 'text') => {
   console.log('%c엔1트리 글 백업%c백업을 시작합니다...', 'background-color: #45ed89; padding: .3rem; font-weight: 600; font-family: \'NanumSquare\'; font-size: 1.3rem; border-radius: 3rem; padding: 0 1.5rem;', 'font-family: \'NanumSquare\'; font-size: 1.3rem; margin-left: 1rem;')
   const postId = (await (await (await fetch(`/api/discuss/find?username=${user.username}&title=&sort=created&rows=0&page=1&noCache=${Date.now()}`)).json()).data).map(post => post._id)
   const postList = []
